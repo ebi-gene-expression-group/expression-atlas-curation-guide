@@ -1,6 +1,6 @@
 # Inferred cell type curation rules
 
-This is a general guideline on how we curate inferred cell types for SCEA, at the moment SCEA published two types of inferred cell type (ICT) annotations on the web - *__inferred cell type - ontology labels__* and *__inferred cell type - authors labels__*. How they these are technically captured in files differs for plate-based and droplet-based experiments (as the former has sdrf demultiplexed by cell while the latter does not) but the curation rules are the same for both.
+This is a general guideline on how we curate inferred cell types for SCEA, at the moment SCEA published two types of inferred cell type (ICT) annotations on the web - *__inferred cell type - ontology labels__* and *__inferred cell type - authors labels__*. How these are technically captured in files differs for plate-based and droplet-based experiments (as the former has sdrf demultiplexed by cell while the latter does not - see below for details) but the curation rules are the same for both.
 
 **Always keep the absolute untouched original annotations exactly as they came from the authors in a separate column from the two ICT columns** (see below for details)
 
