@@ -49,7 +49,7 @@ The absolute **untouched original annotations**, exactly as we received them fro
 ### Droplet-based experiments
 Unlike plate-based experiments, sdrf for droplet experiments like 10x or Drop-seq is not demultiplexed by cell and the samples therein correspond not to individual cells but to libraries. Threfore, ICT annotations cannot be added directly into the sdrf file but are stored separately in an external tab-delimited text file called '<accession>-cells.txt'
 
-The structure of this file is rather permissive - e.g. number of columns and their headings is not strictly curated so long as the file includes these mandatory columns the analysis pipeline watches for:
+The structure of this file is rather permissive - i.e. number of columns and their headings are not strictly curated so long as the file includes these mandatory columns the analysis pipeline watches for:
 * __cell ID__ - unambiguous ID describing each cell and mapping it to its correct library = a combination of a library descriptor and the cell barcode
     - technical replicates present - combine the [technical replicate group] ID from the sdrf with the cell barcode
     - technical replicates not present - combine the [RUN] or [ENA_RUN] ID from the sdrf with the cell barcode
