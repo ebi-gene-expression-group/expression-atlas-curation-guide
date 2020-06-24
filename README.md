@@ -1,4 +1,4 @@
-# Expression Atlas curation guide
+# Expression Atlas curation guide  ![Atlas logo](images/Atlas_logo.png)
 Curation rules and experiment inclusion criteria for the Expression Atlas
 
 ## Curation Guide
