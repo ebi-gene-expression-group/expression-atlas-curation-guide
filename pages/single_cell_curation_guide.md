@@ -227,6 +227,8 @@ If it is unknown at what stage the quality filtering was done, we also use the a
 
 This is supplied by the data submitter. If the experiment involves discovering new cell types or pooled cells from a whole organ or organism, the precise cell type might be undefined at the start of the experiment but inferred later during their analysis. Different cell types are inferred based upon their expression profile to other known cell types or known functions.
 
+See the [Inferred cell type curation guide](inferred_cell_type.md) for detailed instructions how to deal with inferred cell type annotations. 
+
 
 ### Experiments using spike-in RNAs
 
