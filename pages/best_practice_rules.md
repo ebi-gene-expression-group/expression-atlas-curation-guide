@@ -145,11 +145,3 @@ Generally use the main ontology label, not the synonyms and the most specific te
 If the term is not in any ontology, look up the [previous zooma mapping](https://github.com/ebi-gene-expression-group/curated-metadata).
 
 
-#### Technical annotations
-
-Sometime submitters add technical information, such as `replicate`, `sequencing batch`, `run date` etc. 
-These values should not be sample characteristics or factors for Atlas experiments. 
-To keep the information in the sample annotation, turn the attributes into Comments 
-(`Characteristics[replicate] => Comment[replicate]`).
-
-
