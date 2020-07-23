@@ -5,7 +5,7 @@ Curation rules and experiment inclusion criteria for the Expression Atlas
 * General curation standards
 * [Best practice rules](pages/best_practice_rules.md)
 * Bulk experiments
-    * [Technical guidelines](bulk_technical_guide.md) 
+    * [Technical guidelines](pages/bulk_technical_guide.md) 
 * Single cell experiments
     * [Single cell curation guide](pages/single_cell_curation_guide.md)
     * [Inferred cell type rules](pages/inferred_cell_type.md)
