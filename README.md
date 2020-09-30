@@ -27,5 +27,5 @@ Curation rules and experiment inclusion criteria for the Expression Atlas
 
 
 ## Validation
-* Perl MAGE-TAB validator
-* Python Single Cell Atlas validator
+* Perl MAGE-TAB validator (see [Perl Atlas modules](https://github.com/ebi-gene-expression-group/perl-atlas-modules))
+* [Python Single Cell Atlas validator](https://github.com/ebi-gene-expression-group/atlas-metadata-validator)
