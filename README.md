@@ -24,7 +24,6 @@ Curation rules and experiment inclusion criteria for the Expression Atlas
 ## Other information
 * [Accession codes overview](pages/accession_codes.md)
 * [Accession fields in MAGE-TAB](pages/accession_fields_in_magetab.md)
-* Mandatory fields in single cell MAGE-TAB
 
 
 ## Validation
