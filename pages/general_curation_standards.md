@@ -1,6 +1,11 @@
 
 # General curation standards
 
+* [Plant experiments](#Plant-experiments)
+* [Human cell line experiments](#Human-cell-line-experiments)
+* [Mouse experiments](#Mouse-experiments)
+* [Human disease experiments](#Human-disease-experiments)
+
 
 ## Plant experiments
 <span style="color: rgb(0,0,0);"><u><span style="font-size: 14.0px;">Required metadata</span></u><span style="font-size: 14.0px;">:</span> The minimum information required to describe the properties of the source material used in a plant genomics experiment is the following:</span>
@@ -9,13 +14,13 @@
 *   <span style="color: rgb(0,0,0);">ecotype > EFO or cultivar > EFO</span>
 *   <span style="color: rgb(0,0,0);">age > number + unit[time unit] > EFO</span>
 *   <span style="color: rgb(0,0,0);">developmental stage > EFO</span>
-*   <span style="color: rgb(0,0,0);">organism part > PO term that should be also in EFO - (let LH know to include PO term to EFO)</span>  
+*   <span style="color: rgb(0,0,0);">organism part > PO term that should be also in EFO</span>  
 
 <span style="color: rgb(0,0,0);">**Ecotype:** Columbia (Col-0) is the most popular ecotype of Arabidopsis thaliana and has been widely used for various studies in the molecular and genetic fields (Meyerowitz 1989). Other frequently used ecotypes are Landsberg erecta (Ler) and Wassilewskija (Ws-0). Sometimes it is not easy to know if something like _cop-1_ is a genotype (_cop1_ mutant?) or an ecotype. You can check the ecotype in this web page: <span style="color: rgb(0,0,0);">[https://www.arabidopsis.org](https://www.arabidopsis.org/). </span></span><span style="color: rgb(0,0,0);">For example, Col-0 as 'genetic background' should be curated as Characteristics [ecotype] -> Col-0</span>
 
 <span style="color: rgb(0,0,0);">For cultivated plants (mainly food crop or cash crop like cut flowers), use cultivar as their variation is due to selective cultivation (breeding) by humans. For Arabidopsis, use ecotype.</span>
 
-<span style="color: rgb(0,0,0);">**Age** (EFO_0000246): is a temporal measurement of the time period elapsed since an identifiable point in the life cycle of an organism. If a developmental stage is specified, the identifiable point would be the beginning of that stage. Otherwise the identifiable point must be specified such as planting (e.g. 3 days post planting). In plant biology there are different ways of describing the 'moment' the sample is taken: DAP (day after pollination) and DPA (day post anthesis). It could be consider as ‘sampling time point’ </span>
+<span style="color: rgb(0,0,0);">**Age** (EFO_0000246): is a temporal measurement of the time period elapsed since an identifiable point in the life cycle of an organism. If a developmental stage is specified, the identifiable point would be the beginning of that stage. Otherwise the identifiable point must be specified such as planting (e.g. 3 days post planting). In plant biology there are different ways of describing the 'moment' the sample is taken: DAP (day after pollination) and DPA (day post anthesis). It could be considered as ‘sampling time point’ </span>
 
 **Developmental stage** (EFO_0000399): For a complete review of ‘developmental stage’ in Arabidopsis see [ Growth Stage–Based Phenotypic Analysis of Arabidopsis: A Model for High Throughput Functional Genomics in Plants](http://europepmc.org/abstract/MED/11449047)  
 A common term in plant biology is seedling that is a developmental stage, see [seedling developmental stage](http://www.ebi.ac.uk/ols/ontologies/po/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FPO_0007131)
@@ -89,12 +94,6 @@ Special cases:
 
 *   biosource provider > company name. Can be added as a characteristics if the cell line is a primary cell line that is commercially available but does not have a specific cell line name (e.g. Human aortic endothelial cells (HAECs) in [E-MTAB-6605](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-6605))
 
-**What to do when NCBITaxon, UBERON, CL terms are not in EFO?**
-
-1.  Create a ticket in the Pivotal project ‘AE2/Atlas Curation’ called ‘Terms to be added to EFO - weekXX_yearXXXX’
-2.  Just add as description "The following terms needs to be added to EFO" and tag the ticket with the "efo" label
-3.  Include each term that needs to be added + their ontology ID and the accession number of the experiment in which the term was used to annotate the samples.
-4.  Assign the ticket to Laura Huerta to centralise all ontology requests.
 
 **What to do when a cell line is not in EFO?**
 
@@ -131,7 +130,7 @@ Tips:
 3.  Include each disease that needs to be added + accession number of the experiment in which the term was used to annotate the samples and the following information:
     1.  Definition
     2.  Parent term
-4.  Assign the ticket to Laura Huerta to centralise all ontology requests.
+
 
 ## Mouse experiments
 
@@ -153,7 +152,6 @@ Tips:
 *   growth condition
 *   sampling site
 
-## Human experiments
 
 ## Human disease experiments
 
@@ -170,24 +168,22 @@ Tips:
 
 *   ethnic group
 
-Please tag these experiments as 'atlas curation' and ‘OpenTargets’ in the Pivotal project ‘AE2/Atlas Curation’ so we can easily find them.
+Please tag these experiments as 'atlas curation' and 'OpenTargets' in the Pivotal project 'AE2/Atlas Curation' so we can easily find them.
 
 We send data on human disease experiments to OpenTargets to be included in their platform. OpenTargets platform presents associations between genes and diseases in an attempt to help researchers develop drug targets. They are currently interested in all our human disease experiments, but especially in comparisons between **diseased and normal primary tissue**. For this type of comparison, they display a "transcript activity" indicating whether the gene shows increased or decreased activity in the disease when compared with normal tissue. They only want to display this information for "disease vs normal", in **primary tissues**. In cancer experiments, the tissue should be the main affected tissue of the cancer - for example, the comparison "breast carcinoma vs normal" would be allowed if the organism part was "breast". It would not be allowed if the organism part was e.g. "lymph node" (see [ E-GEOD-44408](http://www.ebi.ac.uk/gxa/experiments/E-GEOD-44408/Results)). In this case we can still load the experiment but OpenTargets do not want to display the "transcript activity" for genes for this comparison, as it is not about the original tissue of the cancer. For non-cancer diseases, any tissue is OK as long as it's from real patients and the comparison is disease vs normal. Also not allowed are comparisons on cell lines or other "non-primary" tissue, comparisons about treatments e.g. "response to chemotherapy vs no response to chemotherapy", etc.
 
 To handle this on Expression Atlas, we decided to add a new attribute to the experiment XML configuration, in the contrast element, called cttv_primary. When you (or Conan) run gxa_generateConfigurationForExperiment.pl, this attribute will always be given a zero, e.g.
 
-<pre class="wiki"><contrast id="g1_g2" cttv_primary="0">
-</pre>
+```
+<contrast id="g1_g2" cttv_primary="0">
+```
 
 If your comparison is comparing **disease vs normal** in **primary tissue** of the disease origin, please change this to a 1, e.g.:
 
-<pre class="wiki"><contrast id="g1_g2" cttv_primary="1">
-</pre>
+```
+<contrast id="g1_g2" cttv_primary="1">
+```
 
 This will then be picked up by the code that collects data to send to OpenTargets, enabling the "transcript activity" to be defined for the differentially expressed gene(s) in this comparison on the OpenTargets website.
 
-<span style="color: rgb(112,112,112);"> </span>
 
-<span style="color: rgb(112,112,112);"> </span>
-
-</div>
