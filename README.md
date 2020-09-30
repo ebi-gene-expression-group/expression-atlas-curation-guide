@@ -2,7 +2,7 @@
 Curation rules and experiment inclusion criteria for the Expression Atlas
 
 ## Curation Guide
-* General curation standards
+* [General curation standards](pages/general_curation_standards.md)
 * [Best practice rules](pages/best_practice_rules.md)
 * Bulk experiments
     * [Technical guidelines](pages/bulk_technical_guide.md) 
