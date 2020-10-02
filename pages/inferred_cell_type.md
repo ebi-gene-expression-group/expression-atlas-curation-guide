@@ -49,10 +49,4 @@ The mage-tab file structure for plate based experiments like Smart-seq2 or SMART
 The absolute **untouched original annotations**, exactly as we received them from the submitter should be included as Comment[submitted inferred cell type] (placed after Characteristics) - this is for internal use only and will not be visible on the SCEA website (unless users download the full sdrf file).
 
 ### Droplet-based experiments
-Unlike plate-based experiments, sdrf for droplet experiments like 10x or Drop-seq is not demultiplexed by cell and the samples therein correspond not to individual cells but to libraries. Threfore, ICT annotations cannot be added directly into the sdrf file but are stored separately in an external tab-delimited text file called '*accession*-cells.txt'.
-
-The structure of this file is rather permissive - i.e. number of columns and their headings are not strictly curated so long as the file includes these mandatory columns the analysis pipeline watches for:
-* __cell ID__ - unambiguous ID describing each cell and mapping it to its correct library = a combination of a library descriptor and the cell barcode
-    - technical replicates present - combine the [technical replicate group] ID from the sdrf with the cell barcode
-    - technical replicates not present - combine the [RUN] or [ENA_RUN] ID from the sdrf with the cell barcode
-* __inferred cell type - ontology labels__ and/or __inferred cell type - authors labels__
+Unlike plate-based experiments, sdrf for droplet experiments like 10x or Drop-seq is not demultiplexed by cell and the samples therein correspond not to individual cells but to libraries. Threfore, ICT annotations cannot be added directly into the sdrf file but are stored separately in an external tab-delimited text file. See [here](single_cell_curation_guide.md#cell-level-metadata-for-droplet-based-experiments) for the details about the file format. 
