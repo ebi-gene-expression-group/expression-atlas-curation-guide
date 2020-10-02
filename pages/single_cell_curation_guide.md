@@ -299,28 +299,28 @@ Some droplet-based sequencing submissions will have additional metadata such as 
 
 The file should be named experiment-accession.cells.txt (e.g. E-GEOD-130148.cells.txt) and placed in the single cell experiment loading directory along with the IDF/SDRF for analysis.
 
-
 The cells.txt file should be a tab-separated file with the Cell ID in the first column and annotations in the following columns:
 
 **Cell ID**
 
-This should be a list of the run ID of the library and the cell barcode connected by a hyphen.
+This should be a list of the run ID of the library and the cell barcode connected by a hyphen. The run ID must match with the AssayName found in the first column of the Experiment design file (or "expanded condensed" SDRF for droplet experiments).
 
-It should map to the AssayName found in the first column of the Experiment design file (expanded SDRF for droplet experiments produced by Pablo)
+The run ID of the library shall be taken from the ENA_RUN or RUN column in the SDRF if there are no technical replicates, e.g. SRR8942433-ATATCCGCCGCA
 
-SRR8942433-ATATCCGCCGCA
-
-The run ID of the library shall be taken from the ENA_RUN column in the SDRF if there are no technical replicates.
-
-If there are technical replicates ENA_RUN should be replaced with the value in the technical replicate group column:
+If there are technical replicates run ID should be replaced with the value in the technical replicate group column:
 usually the BioSampleID, e.g. SAMN123045-AAGCTTACCGG
-If there are no BioSampleIDs then these should be mapped to the technical group name i.e. group1-cell barcode (no spaces allowed)
 
-If there are no technical replicates and no ENA_RUN, use the value from the RUN column.
+If there are technical replicates but no BioSample IDs then these should be mapped to the technical group name i.e. group1-cell barcode (no spaces allowed)
 
-**inferred cell type** (and **authors inferred cell type**)
 
-This should be the curated list of inferred cell types (curated where possible from submitter supplied inferred cell types mapped to EFO terms). The header should be the same as those for sample characteristics of the Experiment design file.
+**Inferred cell type**
 
-	
+This should be the curated list of inferred cell types (see the [inferred cell type curation guide](inferred_cell_type.md) for details). The header should be the same as those for sample characteristics of the Experiment design file.
+
+**Example:**
+
+|Cell ID| Inferred cell type - ontology labels| Inferred cell type - author labels |
+|:--- |:--- |:--- |
+| SRR11589514-CCACAGGCCTCA | neuron | Arx+ neuron |
+
 
