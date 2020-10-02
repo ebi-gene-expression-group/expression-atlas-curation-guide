@@ -15,10 +15,10 @@ Curation rules and experiment inclusion criteria for the Expression Atlas
 
 
 ## Atlas inclusion rules
-* General
-* Differential experiments
-* Baseline experiments
-* Single cell experiments
+* [General](pages/inclusion_criteria.md)
+* [Differential experiments](pages/inclusion_criteria.md#Additional-rules)
+* [Baseline experiments](pages/inclusion_criteria.md#Additional-rules)
+* [Single cell experiments](pages/inclusion_criteria.md#Additional-rules)
 
 
 ## Other information
