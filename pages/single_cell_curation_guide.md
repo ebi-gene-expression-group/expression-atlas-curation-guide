@@ -123,8 +123,9 @@ e.g. 1:40000
 **Comment[technical replicate group]**
 
 The values will be the BioSample accession ("SAMEA..."). If there are no BioSamples accessions, 
-use a pattern like "cell1", "cell2", ... because these labels will be displayed in the interface, 
-for example when you hover over a cell in the tSNE plot.
+use a pattern like "group1", "group2", ... (only alphanumerical characters are allowed for these values). All assays should be given a group label, 
+even if some of the samples may not have any technical replicates. 
+These technical replicate labels will be displayed in the interface, for example when you hover over a cell in the tSNE plot.
 
 
 In addition to the fields above, also the regular ENA/SRA information is required:
