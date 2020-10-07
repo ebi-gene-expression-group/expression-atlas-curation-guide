@@ -181,6 +181,12 @@ This has two fields the first with only two possible values: baseline or differe
 
 This should contain the list of additional attributes (which are not already factors) that we would like to display in the portal, e.g. individual, sex, genotype. Tab-separated list (one value per column).
 
+**Comment[EABatchEffect]**
+
+List of the factor(s) used for batch effect correction. Usually this is "individual". This is applicable if the paper clearly states that a batch correction
+has been applied, or when the tSNE plot shows very little mixing of cells from different individuals. 
+We don't want to risk masking disease effects, so if in doubt, applying this factor should be done after disucssion with bioinformaticians. 
+
 **Comment[EACurator]**
 
 Name of the curator that curated and loaded the experiment into Single Cell Atlas.
