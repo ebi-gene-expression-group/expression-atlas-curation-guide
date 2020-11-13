@@ -21,10 +21,10 @@ Additionally, we employ several “softer” guidelines to determine whether or 
 * Experimental metadata are of high quality and confidence
 * The experimental design is not too complex (e.g. not too many factors) and allows for straightforward one-to-one comparisons
 
-For **differential** experiments: 
+For **differential** (bulk) experiments: 
 * The experiment should have at least 2 experimental groups, with 3 biological replicates each and also have a clear control/reference group
 
-For **baseline** experiments: 
+For **baseline** (bulk) experiments: 
 
 * The experiment design does not involve any perturbations and the dataset should have at least 3 experimental groups with 3 biological replicates each
 
