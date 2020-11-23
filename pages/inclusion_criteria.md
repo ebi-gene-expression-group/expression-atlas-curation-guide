@@ -13,13 +13,10 @@ To be included in Expression Atlas or Single Cell Expression Atlas each experime
 * Annotations for microarray probes are available
 * Sufficient sample annotation is provided
 
-## Additional rules 
 
-Additionally, we employ several “softer” guidelines to determine whether or not an experiment is eligible for inclusion into Expression Atlas:
+## Experiment type specific rules
 
-* The experiment addresses a relevant biological question (is not technical or proof of principle study)
-* Experimental metadata are of high quality and confidence
-* The experimental design is not too complex (e.g. not too many factors) and allows for straightforward one-to-one comparisons
+Depending on the experiment type a few more conditions must be met for inclusion.
 
 For **differential** (bulk) experiments: 
 * The experiment should have at least 2 experimental groups, with 3 biological replicates each and also have a clear control/reference group
@@ -40,6 +37,16 @@ For **single cell** experiments:
   10xV3 (3 prime)
   ```
 * The experiment cannot contain a mix of different library construction protocols (with few exceptions, e.g. 10xV2 and 10xV3)
+
+
+## Soft criteria
+
+Additionally, we employ several “softer” guidelines to determine whether or not an experiment is eligible for inclusion into Expression Atlas:
+
+* The experiment addresses a relevant biological question (is not technical or proof of principle study)
+* Experimental metadata are of high quality and confidence
+* The experimental design is not too complex (e.g. not too many factors) and allows for straightforward one-to-one comparisons
+
 
 ## Note
 
