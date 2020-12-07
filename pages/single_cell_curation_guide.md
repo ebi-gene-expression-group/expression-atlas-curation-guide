@@ -252,23 +252,23 @@ Experiments with multiplexed data files (10x, Drop-seq)
 To map each fastq file, we add the following comments in the SDRF and fill in the file name. 
 These comments are also used to create BAM files for ENA brokering and Atlas analysis.
 
-| Comment | 10xV1a | 10xV1i | 10xV2 | Drop-seq |
-|---|---|---|---|---|
-| [read1 file]  | R1 | -RA (one interleaved file with both reads) | R1 | R1 |
-| [read2 file] | R3 | -RA (one interleaved file with both reads) | R2 | R2 |
-| [index1 file] (if present) | R2 | -I1 | I1 | I1 |
-| [index2 file] (if present) | I1 | -I2 | |	
+| Comment | 10xV1a | 10xV1i | 10xV2 | Drop-seq | 10xV3 |
+|---|---|---|---|---|---|
+| [read1 file]  | R1 | -RA (one interleaved file with both reads) | R1 | R1 | R1 |
+| [read2 file] | R3 | -RA (one interleaved file with both reads) | R2 | R2 | R2 |
+| [index1 file] (if present) | R2 | -I1 | I1 | I1 |  I1 |
+| [index2 file] (if present) | I1 | -I2 | | |	
 	
 
 
 Additional info: The file contents for each version of 10x (with default read size and offset):
 
-| Comment | 10xV1a | 10xV1i | 10xV2 | Drop-seq |
-|---------|--------|--------|-------|----------|
-| [read1 file] | cDNA (98bp, offset 0) | read 1: cDNA (98bp, offset 0) | cell barcode (16bp, offset 0) + UMI (10bp, offset 16) | cell barcode (12bp, offset 0) + UMI (8bp, offset 12) |
-| [read2 file] | UMI (10bp, offset 0) | read 2: UMI (10bp, offset 0) | cDNA (98bp, offset 0) | cDNA (50bp, offset 0) | 
-| [index1 file] (if present) | cell barcode (14bp, offset 0) | cell barcode (14bp, offset 0) | sample barcode (8bp, offset 0) | | 	
-| [index2 file] (if present) | sample barcode (8bp, offset 0) | sample barcode (8bp, offset 0) | | | 
+| Comment | 10xV1a | 10xV1i | 10xV2 | Drop-seq | 10xV3 |
+|---------|--------|--------|-------|----------|-------|
+| [read1 file] | cDNA (98bp, offset 0) | read 1: cDNA (98bp, offset 0) | cell barcode (16bp, offset 0) + UMI (10bp, offset 16) | cell barcode (12bp, offset 0) + UMI (8bp, offset 12) | cell barcode (16bp, offset 0) + UMI (12bp, offset 16) |
+| [read2 file] | UMI (10bp, offset 0) | read 2: UMI (10bp, offset 0) | cDNA (98bp, offset 0) | cDNA (50bp, offset 0) | cDNA (91bp, offset 0) |
+| [index1 file] (if present) | cell barcode (14bp, offset 0) | cell barcode (14bp, offset 0) | sample barcode (8bp, offset 0) | | sample barcode (8bp, offset 0)|	
+| [index2 file] (if present) | sample barcode (8bp, offset 0) | sample barcode (8bp, offset 0) | | | |
 
 
 
