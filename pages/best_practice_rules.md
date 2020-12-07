@@ -10,10 +10,10 @@ which helps to retrieve experiment by metadata searches and makes visualisations
 
 These rules are basic curation style guidelines and apply to virtually all experiments. 
 
-#### **Keep values simple.** 
+#### Keep values simple.
  For sample characteristics and factors, keep the values as concise as possible. 
 
-#### **Single concept in a value.** 
+#### Single concept in a value.
 Split values in sample characteristics and factors or else it will be very hard to map the values cleanly to EFO terms.
 
 "Characteristics [genotype] => wild type C57BL/6J" must be annotated as:
@@ -107,6 +107,7 @@ E.g. cells carry a construct that causes repression of gene expression when acti
 Use `Characteristics[genotype]` (and `Factor Value[genotype]` if variable) to annotate with info about the construct. 
 Use `Characteristics[phenotype]` (and `Factor Value[phenotype]` if variable) to annotate with info about the
 gene expression/repression caused by compound. For example:
+
 | Characteristics[genotype] | Characteristics[phenotype] | ... | FactorValue[phenotype] |
 |:--------------------------|:--------------------------|:-----|:-----------------------|
 | FOXP3-tet-off	| expression of FOXP3 |	... | expression of FOXP3 |
@@ -129,6 +130,7 @@ If we have multiple compounds as a single factor, we can combine them into a sin
 #### Normal and tumour samples
 
 If a study involves both normal and tumor samples from the same patient, this should be coded as:
+
 | Characteristics[disease] | Characteristics[individual] | Characteristics[sampling site] |
 |:-----------|:-----------|:------------|
 | breast cancer	| patient 1 | normal tissue adjacent to neoplasm |
