@@ -6,7 +6,7 @@
 
 :white_check_mark: DO focus on the categories "organism part", "cell type", "disease", "cell line" as this is what people mostly search for in Expression Atlas.
 
-:white_check_mark: DO only include terms from EFO or the ontologies named in the zooma_ontologies.tsv file. If you find a term that is in OLS but not in EFO or the listed ontology, it can be requested to be added in EFO.
+:white_check_mark: DO only include terms from EFO or the ontologies named in the [zooma_ontologies.tsv](https://github.com/ebi-gene-expression-group/perl-atlas-modules/blob/master/supporting_files/zooma_ontologies.tsv) file. If you find a term that is in OLS but not in EFO or the listed ontology, it can be requested to be added in EFO.
 
 :x: DON'T match more specific terms to more general terms. For example: "lower leg" → "leg"
 
