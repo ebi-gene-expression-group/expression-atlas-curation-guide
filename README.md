@@ -11,7 +11,7 @@ Curation rules and experiment inclusion criteria for the Expression Atlas
     * [Inferred cell type rules](pages/inferred_cell_type.md)
     * [Technical guidelines](pages/single_cell_technical_guide.md)
 * Controlled-access experiments
-* Zooma ontology term mapping
+* [Ontology term mapping](pages/ontology_term_mapping.md)
 
 
 ## Atlas inclusion rules
