@@ -1,5 +1,6 @@
 # Guidelines for curating ontology terms
 
+All characteristics terms from all Atlas experiments are attempted to be mapped to ontology terms via the Zooma mapping procedure (see internal documentation how this is run). The output is a list of terms that could not be automatically mapped by Zooma because these haven't been seen before. Curators go through this list of terms and find the suitable ontology terms. The final term mappings are stored in the [zoomage_report.CURATED.tsv](https://github.com/ebi-gene-expression-group/curated-metadata) file on GitHub.
 
 ## General mapping strategy
 :white_check_mark: DO try to find exact synonyms. I ask myself "would the annotation still have the same meaning if I used the ontology label instead?".
