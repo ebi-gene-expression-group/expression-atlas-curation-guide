@@ -187,6 +187,8 @@ List of the factor(s) used for batch effect correction. Usually this is "individ
 has been applied, or when the tSNE plot shows very little mixing of cells from different individuals. 
 We don't want to risk masking disease effects, so if in doubt, applying this factor should be done after disucssion with bioinformaticians. 
 
+Another use case for the batch correction is combining slighly different technologies in one experiment, for example when mixing 10x 3' and 10x 5' data, or single cell and single nuclei data. 
+
 **Comment[EACurator]**
 
 Name of the curator that curated and loaded the experiment into Single Cell Atlas.
