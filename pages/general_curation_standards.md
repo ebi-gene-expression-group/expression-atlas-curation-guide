@@ -84,7 +84,7 @@ Cell line experiments are the ones involving immortalized cell lines and natural
 *   cell line > should be in EFO. The cell line term that you use to annotate your samples must be exactly the term used in EFO
 *   disease > EFO
 *   organism part > UBERON term that should be also in EFO
-*   cell type > CL term that should be also in EFO
+*   cell type > CL term that should be also in EFO - no longer mandatory as many cancer cell types aren't applicable
 
 Comments:
 
