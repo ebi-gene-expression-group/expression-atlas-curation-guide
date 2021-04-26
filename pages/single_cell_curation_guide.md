@@ -7,6 +7,7 @@
 * [Experiments using spike-in RNAs](#experiments-using-spike-in-rnas)
 * [Experiments with multiplexed data files (10x, Drop-seq)](#experiments-with-multiplexed-data-files-10x-Drop-seq)
 * [Cell-level metadata for droplet-based experiments](#cell-level-metadata-for-droplet-based-experiments)
+* [Using SRA FASTQ files]()
 
 
 ## SDRF file
@@ -332,4 +333,46 @@ This should be the curated list of inferred cell types (see the [inferred cell t
 |:--- |:--- |:--- |
 | SRR11589514-CCACAGGCCTCA | neuron | Arx+ neuron |
 
+
+## Using SRA FASTQ files
+
+First import your GEO dataset following the instructions in the SOP here: GEGCURSOP012 Import: GEO experiments for Expression Atlas
+
+In the FASTQ_URI import field you will see a single FTP link for one file per row as shown below:
+
+|Comment[FASTQ_URI]|
+|---|
+|ftp://ftp.sra.ebi.ac.uk/vol1/srr/SRR120/049/SRR12046049/|
+
+This means that there is only one 'FASTQ' file for this sample, which may not be the case. 
+So then we need to look at the SRA file in the Sequencing read archive
+(e.g. https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR12046049). You want the metadata tab. Here there are two key pieces of information:
+![SRA_metadata_tab](../images/SRA_metadata_tab.png)
+
+The first is the information that this run has 3 reads per spot - that means it comprises three separate files. 
+The second piece of information is the options part highlighted in blue. 
+These two pieces of information tell you which parts of deconstructed files make up which reads:
+* read1 - is linked to the R1 file in the options information and is 26bp long
+* read2 - is linked to the read2 file in the options information and is 91bp long
+* index1 - is linked to the index1 file in the options information and is 8bp long
+* 
+Knowing what we do about 10x v3 library information we can then confidently say the the R1 file is the read1 file; the R2 file is the read2 file and the I1 file is the index1 file.
+__Note that the make up of the SRA file is different for each dataset so will need to look at the run metadata for each dataset to find out which file makes up which part!__
+
+We now need to indicate this in the MAGE-TAB format. The SRA file is downloaded and deconstructed by the sequencing pipeline into its constructive parts as _fastq.gz_ files.
+
+* first file is indicated as _SRR\<run number\>\_1.fastq.gz_
+* second file is indicated as _SRR\<run number\>\_2.fastq.gz_
+* third file is indicated as _SRR\<run number\>\_3.fastq.gz_
+
+We indicate which _fastq.gz_ file corresponds to which read with the usual `Comment[read1 file]`, `Comment[read2 file]` and `Comment[index1 file]` fields, specifying the resulting file names. 
+
+To construct the SRA_URI download link, we replace `FASTQ_URI` with `SRA_URI` and specify the FTP link as: 
+`ftp://ftp.sra.ebi.ac.uk/vol1/srr/` followed by the read information. 
+
+The final example in the SDRF:
+
+|Comment[SRA_URI]|Comment[read1 file]|Comment[read2 file]|Comment[index1 file]|
+|--- |--- |--- |--- |
+|ftp://ftp.sra.ebi.ac.uk/vol1/srr/SRR120/049/SRR12046049|SRR12046049_1.fastq.gz|SRR12046049_2.fastq.gz|SRR12046049_3.fastq.gz|
 
