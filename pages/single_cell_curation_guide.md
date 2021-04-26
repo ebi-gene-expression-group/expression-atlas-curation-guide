@@ -355,7 +355,7 @@ These two pieces of information tell you which parts of deconstructed files make
 * read1 - is linked to the R1 file in the options information and is 26bp long
 * read2 - is linked to the read2 file in the options information and is 91bp long
 * index1 - is linked to the index1 file in the options information and is 8bp long
-* 
+
 Knowing what we do about 10x v3 library information we can then confidently say the the R1 file is the read1 file; the R2 file is the read2 file and the I1 file is the index1 file.
 __Note that the make up of the SRA file is different for each dataset so will need to look at the run metadata for each dataset to find out which file makes up which part!__
 
