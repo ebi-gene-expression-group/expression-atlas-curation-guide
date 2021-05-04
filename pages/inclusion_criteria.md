@@ -19,11 +19,14 @@ To be included in Expression Atlas or Single Cell Expression Atlas each experime
 Depending on the experiment type a few more conditions must be met for inclusion.
 
 For **differential** (bulk) experiments: 
-* The experiment should have at least 2 experimental groups, with 3 biological replicates each and also have a clear control/reference group
+* The experiment must have at least 2 experimental groups, with 3 biological replicates each 
+* The experiment must have a clear control/reference group
+* The experiment is not a two-colour microarray study
 
 For **baseline** (bulk) experiments: 
 
-* The experiment design does not involve any perturbations and the dataset should have at least 3 experimental groups with 3 biological replicates each
+* The experiment design does not involve any perturbations 
+* The experiment should have at least 3 experimental groups with 3 biological replicates each
 
 For **single cell** experiments:
 
