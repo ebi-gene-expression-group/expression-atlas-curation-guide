@@ -7,8 +7,8 @@ This is a general guideline on how we curate inferred cell types for SCEA, at th
 In this guide:
 1. Curation rules
    - General style
-   - Inferred cell type - ontology labels
-   - Inferred cell type - authors labels
+   - Authors cell type - ontology labels
+   - Authors cell type
 2. Technical implementation
    - Plate-based experiments
    - Droplet-based experiments
