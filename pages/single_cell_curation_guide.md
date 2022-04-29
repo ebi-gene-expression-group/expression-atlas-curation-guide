@@ -330,7 +330,7 @@ This should be the curated list of inferred cell types (see the [inferred cell t
 
 **Example:**
 
-|Cell ID| Inferred cell type - ontology labels| Inferred cell type - author labels |
+|Cell ID| authors cell type - ontology labels| authors cell type|
 |:--- |:--- |:--- |
 | SRR11589514-CCACAGGCCTCA | neuron | Arx+ neuron |
 
