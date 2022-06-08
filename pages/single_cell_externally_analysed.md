@@ -33,11 +33,11 @@ Which fields from the cell annotation tables should be passed to curation? annDa
 
 ## Questionnaire for submitters:
 
- * Which Ensembl reference version as used? Please provide genome build and annotation version. For example `hg38, Ensembl version 106`. 
- * What tools were used for mapping and quantification, in which version? For example `CellRanger version 1.0`
- * For each matrix present in the annData object (under .X, .raw.X and .layers):
-  - Have cells been filtered out? By what criteria? (This is usually true, since the matrices in annData objects must all pertain to the same set of cells.
-  - Have genes been filtered out? By what criteria? Where present, `.raw.X` may sometimes contain a matrix before any gene filtering has been applied.
-  - Have values been normalised? How?
-  - Has a log transform been applied? How? 
-  - Has any additional scaling been applied?
+* Which Ensembl reference version as used? Please provide genome build and annotation version. For example `hg38, Ensembl version 106`. 
+* What tools were used for mapping and quantification, in which version? For example `CellRanger version 1.0`
+* For each matrix present in the annData object (under .X, .raw.X and .layers):
+    - Have cells been filtered out? By what criteria? (This is usually true, since the matrices in annData objects must all pertain to the same set of cells.
+    - Have genes been filtered out? By what criteria? Where present, `.raw.X` may sometimes contain a matrix before any gene filtering has been applied.
+    - Have values been normalised? How?
+    - Has a log transform been applied? How? 
+    - Has any additional scaling been applied?
