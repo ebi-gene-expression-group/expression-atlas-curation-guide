@@ -8,6 +8,7 @@ Here is an overview of the letter codes used in Expression Atlas and their meani
 
 ### Accession codes of active projects/data sources
 
+* **ANND**: Single-cell experiments that have not been reprocessed by Expression Atlas (imported via anndata object)  
 * **CURD**: Curated data, experiments from mixed sources or where only part of a study was used
 * **ENAD**: European Nucleotide Archive (ENA) imported data
 * **GEOD**: Gene Expression Omnibus (GEO) imported data
