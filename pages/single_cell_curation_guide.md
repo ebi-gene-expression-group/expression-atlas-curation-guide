@@ -152,8 +152,8 @@ Should be used as a experimental variable for all experiments that have individu
 
 ### Experiment type
 
-All scRNA-seq experiments must be annotated as 
-"[RNA-seq of coding RNA from single cells](https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0005684)" under Comment[AEExperimentType]. 
+Single-cell RNA-seq experiments should be annotated as 
+"[RNA-seq of coding RNA from single cells](https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0005684)" under Comment[AEExperimentType]. For single-nucleus sequencing experiments, use "[single nucleus RNA sequencing](https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0009809)".
 
 
 ### Protocols
