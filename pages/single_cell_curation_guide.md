@@ -23,6 +23,7 @@ Currently, we are processing smart-like, smart-seq2; Drop-seq and 10xV2/10xV3 ex
 
 ### SDRF fields that all experiments should have
 
+
 **single cell quality**
 ```
 OK
@@ -119,6 +120,12 @@ ERCC mix1 and mix2
 **spike in dilution** ([EFO_0010217](https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0010217))
 ```
 e.g. 1:40000
+```
+
+**Material Type** (for the Source node)
+```
+cell
+nucleus
 ```
 
 
