@@ -1,0 +1,7 @@
+name: geo-importer
+channels:
+  - ebi-gene-expression-group
+  - bioconda
+  - conda-forge
+  - defaults
+prefix: /opt/anaconda3/envs/geo-importer

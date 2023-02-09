@@ -1,0 +1,42 @@
+name: atlas-metadata-validator
+channels:
+  - ebi-gene-expression-group
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - atlas-metadata-validator=1.6.0=pyhdfd78af_0
+  - brotlipy=0.7.0=py38h96a0964_1001
+  - ca-certificates=2021.5.30=h033912b_0
+  - certifi=2021.5.30=py38h50d1736_0
+  - cffi=1.14.6=py38h1a44b6c_1
+  - chardet=4.0.0=py38h50d1736_1
+  - charset-normalizer=2.0.0=pyhd8ed1ab_0
+  - cryptography=3.4.7=py38h1fa4640_0
+  - gitdb=4.0.7=pyhd8ed1ab_0
+  - gitpython=3.1.24=pyhd8ed1ab_0
+  - idna=3.1=pyhd3deb0d_0
+  - libcxx=12.0.1=habf9029_0
+  - libffi=3.4.2=he49afe7_4
+  - libzlib=1.2.11=h9173be1_1013
+  - ncurses=6.2=h2e338ed_4
+  - openssl=1.1.1l=h0d85af4_0
+  - pip=21.2.4=pyhd8ed1ab_0
+  - pycparser=2.20=pyh9f0ad1d_2
+  - pyopenssl=21.0.0=pyhd8ed1ab_0
+  - pysocks=1.7.1=py38h50d1736_3
+  - python=3.8.12=h17280f6_1_cpython
+  - python_abi=3.8=2_cp38
+  - readline=8.1=h05e3726_0
+  - requests=2.26.0=pyhd8ed1ab_0
+  - setuptools=58.2.0=py38h50d1736_0
+  - six=1.16.0=pyh6c4a22f_0
+  - smmap=3.0.5=pyh44b312d_0
+  - sqlite=3.36.0=h23a322b_2
+  - tk=8.6.11=h5dbffcc_1
+  - typing_extensions=3.10.0.2=pyha770c72_0
+  - urllib3=1.26.7=pyhd8ed1ab_0
+  - wheel=0.37.0=pyhd8ed1ab_1
+  - xz=5.2.5=haf1e3a3_1
+  - zlib=1.2.11=h9173be1_1013
+prefix: /opt/anaconda3/envs/atlas-metadata-validator
