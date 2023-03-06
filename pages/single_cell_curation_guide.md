@@ -37,7 +37,7 @@ The method that was used to singularise the cells in order to enable individual 
 ```
 FACS
 Fluidigm C1
-10x
+10x technology
 Drop-seq
 inDrop
 Seq-Well
@@ -58,8 +58,10 @@ smart-seq2
 10xV1a
 10xV1i
 10xV2
-10x5prime
+10x 5' v1
 10xV3
+10x Ig enrichment
+10x feature barcode (cell surface protein profiling)
 drop-seq
 seq-well
 SCRB-seq	
@@ -70,6 +72,8 @@ STRT-seq
 other
 ```
 *smart-like → Libraries prepared with SMARTer Ultra Low RNA Kit for Illumina Sequencing (Clontech Cat#634936) can be also analysed with "smart-seq2" pipeline
+
+*for 10x libraries not included in the list above, please use the EFO terms for them.
 
 **end bias** ([EFO_0010187](https://www.ebi.ac.uk/ols/ontologies/efo/terms?iri=http%3A%2F%2Fwww.ebi.ac.uk%2Fefo%2FEFO_0010187))
 
