@@ -33,6 +33,8 @@ Which fields from the cell annotation tables should be passed to curation? annDa
 
 ## Questionnaire for submitters:
 
+This questionnaire should be sent to submitters before we start processing their anndata, to ensure the anndata meets our requirements.
+
 * Which Ensembl reference version was used? Please provide genome build and annotation version. For example `hg38, Ensembl version 106`. 
 * What tools (and versions) were used for mapping and quantification? For example `CellRanger version 1.0`
 * Please make sure a filtered, normalised and untransformed matrix included in the anndata object. Which one is it?
