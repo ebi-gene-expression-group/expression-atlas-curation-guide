@@ -10,6 +10,7 @@ Curation rules and experiment inclusion criteria for the Expression Atlas
     * [Single cell curation guide](pages/single_cell_curation_guide.md)
     * [Inferred cell type rules](pages/inferred_cell_type.md)
     * [Technical guidelines](pages/single_cell_technical_guide.md)
+    * [Additional instructions for externally analysed datasets](pages/single_cell_externally_analysed.md)
 * Controlled-access experiments
 * [Ontology term mapping](pages/ontology_term_mapping.md)
 
