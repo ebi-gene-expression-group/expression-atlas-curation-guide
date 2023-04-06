@@ -15,7 +15,7 @@ At a minimum we need:
 
 annData files can contain multiple matrices derived from different levels of processing. They will be stored in `.X` as well as possibly `.raw.x` and `.layers[]` of the object.
  
-Some of those processes can be destrutive, and remove the information required for any augmented analysis we may undertake (e.g. marker detection). Is therefore crucial for us to have the folowing information for each matrix in the above slots:
+Some of those processes can be destrutive, and remove the information required for any augmented analysis we may undertake (e.g. marker detection). Is therefore crucial for us to have the following information for each matrix in the above slots:
 
  - Have cells been filtered out? By what criteria? (This is usually true, since the matrices in annData objects must all pertain to the same set of cells.
  - Have genes been filtered out? By what criteria? Where present, `.raw.X` may sometimes contain a matrix before any gene filtering has been applied.
@@ -44,3 +44,4 @@ This questionnaire should be sent to submitters before we start processing their
     - Have values been normalised? How?
     - Has a log transform been applied? How? 
     - Has any additional scaling been applied?
+* If the data processing has been described in a publication or preprint, please provide url/doi.
