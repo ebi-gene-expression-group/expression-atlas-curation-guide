@@ -27,7 +27,7 @@ Some of those processes can be destrutive, and remove the information required f
 
 We ideally want a filtered and normalised matrix, with or without a log transform (we can reverse the transform dynamically as we process the annDAta file). If any destructive scaling has been applied this is harder for us to work with.
 
-The index of .var that belongs to the matrix for Atlas loading must be the Ensembl ID. Otherwise, it will cause errors in the later processing step.
+The index of AnnData.var must be the Ensembl ID. Otherwise, it will cause errors in the later processing step.
 
 ## Cell annotation fields
 
@@ -38,8 +38,9 @@ Which fields from the cell annotation tables should be passed to curation? annDa
 This questionnaire should be sent to submitters before we start processing their anndata, to ensure the anndata meets our requirements.
 
 * Which Ensembl reference version was used? Please provide genome build and annotation version. For example `hg38, Ensembl version 106`. 
-* What tools (and versions) were used for mapping and quantification? For example `CellRanger version 1.0`
-* Please make sure a filtered, normalised and untransformed matrix included in the anndata object, and the index of the corresponding .var is Ensembl ID. Which matrix is it?
+* What tools (and versions) were used for mapping and quantification? For example `CellRanger version 1.0`.
+* Please make sure a filtered, normalised and untransformed matrix included in the anndata object. Which matrix is it?
+* Please make sure the index of AnnData.var is Ensembl ID.
 * For each matrix present in the annData object (under .X, .raw.X and .layers):
     - Have cells been filtered out? By what criteria? (This is usually true, since the matrices in annData objects must all pertain to the same set of cells.
     - Have genes been filtered out? By what criteria? Where present, `.raw.X` may sometimes contain a matrix before any gene filtering has been applied.
