@@ -5,12 +5,12 @@
 
 To be included in Expression Atlas or Single Cell Expression Atlas each experiment must meet all of the following criteria:
 
-* Experiment measures gene or protein expression
+* Experiment measures gene by RNAseq/scRNA-seq or snRNAseq (MA experiments are no longer eligible)
+* Proteomics experiments are admissible for bulk Expression Atlas via PRIDE collaboration only
 * Raw data are available
 * All samples within the dataset belong to a single species
 * Samples come from non-bacterial species
 * The species genome is available through Ensembl
-* Annotations for microarray probes are available
 * Sufficient sample annotation is provided
 
 
